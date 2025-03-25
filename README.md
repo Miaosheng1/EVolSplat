@@ -65,7 +65,7 @@ python setup.py install
 ##### Install gsplat
 Install [gsplat](https://github.com/nerfstudio-project/gsplat) from source code. We recommend the version >= 1.0.0.
 ```bash
-pip ninja==1.11.1.1
+pip install ninja==1.11.1.1
 pip install git+https://github.com/nerfstudio-project/gsplat.git
 ```
 If you meet some problems, you can check the dependencies from `environment.yml`.
