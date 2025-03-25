@@ -1,0 +1,24 @@
+model:
+  num_neighbour_select: 3
+  sparseConv_outdim: 16
+  offset_max: 0.1
+  local_radius: 1  ## project window radius range: 3×3
+
+encoder:
+  voxel_size: 0.1
+
+bg_model:
+  res: 700
+  moving: True  ## whether to move the background hemisphere
+  radius: 100
+  center: [0,3.8,5.6]
+
+## for Kitti360 dataset
+Boundingbox_min: [-16,-9,-20]
+Boundingbox_max: [16,3.8,60]
+
+## for Waymo dataset
+# Boundingbox_min: [-25,-20,-20]
+# Boundingbox_max: [25,4.8,80]  
+
+  

@@ -1,0 +1,199 @@
+Metadata-Version: 2.1
+Name: nerfstudio
+Version: 1.1.2
+Summary: All-in-one repository for state-of-the-art NeRFs
+License: Apache 2.0
+Project-URL: Documentation, https://docs.nerf.studio
+Classifier: Development Status :: 3 - Alpha
+Classifier: Programming Language :: Python
+Requires-Python: >=3.8.0
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: appdirs>=1.4
+Requires-Dist: av>=9.2.0
+Requires-Dist: awscli>=1.31.10
+Requires-Dist: comet_ml>=3.33.8
+Requires-Dist: cryptography>=38
+Requires-Dist: tyro>=0.6.6
+Requires-Dist: gdown>=4.6.0
+Requires-Dist: ninja>=1.10
+Requires-Dist: h5py>=2.9.0
+Requires-Dist: imageio>=2.21.1
+Requires-Dist: importlib-metadata>=6.0.0; python_version < "3.10"
+Requires-Dist: ipywidgets>=7.6
+Requires-Dist: jaxtyping>=0.2.15
+Requires-Dist: jupyterlab>=3.3.4
+Requires-Dist: matplotlib>=3.6.0
+Requires-Dist: mediapy>=1.1.0
+Requires-Dist: msgpack>=1.0.4
+Requires-Dist: msgpack_numpy>=0.4.8
+Requires-Dist: nerfacc==0.5.2
+Requires-Dist: open3d>=0.16.0
+Requires-Dist: opencv-python==4.8.0.76
+Requires-Dist: Pillow>=10.3.0
+Requires-Dist: plotly>=5.7.0
+Requires-Dist: protobuf!=3.20.0,<=3.20.3
+Requires-Dist: pymeshlab>=2022.2.post2; platform_machine != "arm64" and platform_machine != "aarch64"
+Requires-Dist: pyngrok>=5.1.0
+Requires-Dist: python-socketio>=5.7.1
+Requires-Dist: pyquaternion>=0.9.9
+Requires-Dist: rawpy>=0.18.1; platform_machine != "arm64"
+Requires-Dist: newrawpy>=1.0.0b0; platform_machine == "arm64"
+Requires-Dist: requests
+Requires-Dist: rich>=12.5.1
+Requires-Dist: scikit-image>=0.19.3
+Requires-Dist: splines==0.3.0
+Requires-Dist: tensorboard>=2.13.0
+Requires-Dist: torch>=1.13.1
+Requires-Dist: torchvision>=0.14.1
+Requires-Dist: torchmetrics[image]>=1.0.1
+Requires-Dist: typing_extensions>=4.4.0
+Requires-Dist: viser==0.1.27
+Requires-Dist: nuscenes-devkit>=1.1.1
+Requires-Dist: wandb>=0.13.3
+Requires-Dist: xatlas
+Requires-Dist: trimesh>=3.20.2
+Requires-Dist: timm==0.6.7
+Requires-Dist: gsplat==1.0.0
+Requires-Dist: pytorch-msssim
+Requires-Dist: pathos
+Requires-Dist: packaging
+Requires-Dist: fpsample
+Provides-Extra: gen
+Requires-Dist: diffusers==0.16.1; extra == "gen"
+Requires-Dist: transformers==4.29.2; extra == "gen"
+Requires-Dist: accelerate==0.19.0; extra == "gen"
+Requires-Dist: bitsandbytes==0.39.0; extra == "gen"
+Requires-Dist: sentencepiece==0.1.99; extra == "gen"
+Provides-Extra: dev
+Requires-Dist: pre-commit==3.3.2; extra == "dev"
+Requires-Dist: pytest==7.1.2; extra == "dev"
+Requires-Dist: pytest-xdist==2.5.0; extra == "dev"
+Requires-Dist: typeguard==2.13.3; extra == "dev"
+Requires-Dist: ruff==0.1.13; extra == "dev"
+Requires-Dist: sshconf==0.2.5; extra == "dev"
+Requires-Dist: pycolmap>=0.3.0; extra == "dev"
+Requires-Dist: diffusers==0.16.1; extra == "dev"
+Requires-Dist: opencv-stubs==0.0.7; extra == "dev"
+Requires-Dist: transformers==4.29.2; extra == "dev"
+Requires-Dist: pyright==1.1.331; extra == "dev"
+Requires-Dist: projectaria-tools>=1.3.1; sys_platform != "win32" and extra == "dev"
+Requires-Dist: torch<2.2,>=1.13.1; extra == "dev"
+Provides-Extra: docs
+Requires-Dist: furo==2022.09.29; extra == "docs"
+Requires-Dist: ipython==8.6.0; extra == "docs"
+Requires-Dist: readthedocs-sphinx-search==0.1.2; extra == "docs"
+Requires-Dist: myst-nb==0.16.0; extra == "docs"
+Requires-Dist: nbconvert==7.2.5; extra == "docs"
+Requires-Dist: nbformat==5.9.2; extra == "docs"
+Requires-Dist: sphinx==5.2.1; extra == "docs"
+Requires-Dist: sphinxemoji==0.2.0; extra == "docs"
+Requires-Dist: sphinx-argparse==0.3.1; extra == "docs"
+Requires-Dist: sphinx-copybutton==0.5.0; extra == "docs"
+Requires-Dist: sphinx-design==0.2.0; extra == "docs"
+Requires-Dist: sphinxext-opengraph==0.6.3; extra == "docs"
+
+<h1 align="center">EVolSplat: Efficient Volumetric Splatting for Real-Time Urban View Synthesis (CVPR 2025)</h1>
+
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2407.12395)
+
+Sheng Miao, [Jiaxin Huang](https://jaceyhuang.github.io/), Dongfeng Bai, Xu Yan, [Hongyu Zhou](https://hyzhou404.github.io/), [Yue Wang](https://ywang-zju.github.io/), Bingbing Liu, [Andreas Geiger](https://www.cvlibs.net/) and [Yiyi Liao](https://yiyiliao.github.io/) 
+
+Our project page can be seen [here](https://xdimlab.github.io/EVolSplat/).
+<img src="./docs/teaser.png" height="200">
+## :book: Datasets
+We evaluate our model on [KITTI-360](http://www.cvlibs.net/datasets/kitti-360/) and [Waymo](https://waymo.com/open/download/). Here we show the structure of a test dataset as follow, similar to the [EDUS](https://xdimlab.github.io/EDUS/). 
+We provide the example data for inference on KITTI-360, which can be found in huggingface [here](https://huggingface.co/datasets/cookiemiao/EVolSplat_infer_dataset/tree/main).
+
+
+The dataset should have a structure as follows:
+```
+├── $PATH_TO_YOUR_DATASET
+    ├── $SCENE_0
+        ├── depth
+        ├── pointcloud/*.ply
+        ├── *.png
+        ...
+        ├── transfroms.json
+    ...
+    ├── SCENE_N
+        ├── depth
+        ├── pointcloud/*.ply
+        ├── *.png
+        ...
+        ├── transfroms.json
+```
+
+## :house: Installation
+Our EVolSplat is built on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio). You can follow the nerfstudio webpage to install our code.  
+
+
+#### Create environment
+We recommend using conda to create a new environment and you can find the detailed environment file in `environment.yml`.
+```bash
+conda create --name EVolSplat -y python=3.8
+conda activate EVolSplat
+pip install --upgrade pip
+```
+#### Dependencies
+Install PyTorch with CUDA (this repo has been tested with CUDA 11.8).
+```bash
+pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
+conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
+```
+After pytorch, install [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn):
+```bash
+pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
+
+```
+Install the spaseCNN library, we recommend the version 2.1.0. We can find the installation instruction in the [torchsparse](https://github.com/mit-han-lab/torchsparse) repository.
+```bash
+conda install -c conda-forge sparsehash
+sudo apt-get install libsparsehash-dev  
+git clone --recursive https://github.com/mit-han-lab/torchsparse
+python setup.py install
+```
+
+#### Installing EVolSplat
+Install EVolSplat form source code
+```bash
+git clone https://github.com/XDimLab/EVolSplat.git
+cd EVolSplat
+pip install --upgrade pip setuptools
+pip install -e .
+```
+
+
+
+
+## :chart_with_upwards_trend: Evaluation & Checkpoint
+We provide the pretrained model trained on `KITTI-360` and `Waymo` and you can download the pre-trained models from  [here](https://xdimlab.github.io/EVolSplat/). 
+
+Place the downloaded checkpoints in `checkpoint` folder in order to test it later.
+
+### Feed-forward Inference
+Replace `$Data_Dir$` with your data path.
+```
+python nerfstudio/scripts/infer_zeroshot.py evolsplat
+ --config_file config/test_GVS_nerf.yaml 
+zeronpt-data 
+--data $Data_Dir$ 
+--drop50=True 
+--include_depth_map=True
+```
+Replace the `--drop50=True` with `--drop80=True` to inference on `Drop80` setting.
+
+## :clipboard: Citation
+
+If our work is useful for your research, please give me a star and consider citing:
+
+```
+@inproceedings{miao2025efficient,
+  title={EVolSplat: Efficient Volumetric Splatting for Real-Time Urban View Synthesis},
+  author={Miao, Sheng and Huang, Jiaxin and Bai, Dongfeng and Yan, Xu and Zhou, Hongyu and Wang, Yue and Liu, Bingbing and Geiger, Andreas and Liao, Yiyi},
+  booktitle={IEEE Conference on Computer Vision and Pattern Recognition},
+}
+```
+## :sparkles: Acknowledgement
+- This project is based on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio)
+- Some codes are brought from [IBRNet](https://github.com/googleinterns/IBRNet).
