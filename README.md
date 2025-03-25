@@ -40,12 +40,21 @@ conda activate EVolSplat
 pip install --upgrade pip
 ```
 #### Dependencies
-Install PyTorch with CUDA (this repo has been tested with CUDA 11.8).
+##### Install PyTorch
+Install PyTorch with CUDA (this repo has been tested with CUDA 11.8 with torch 2.1.2 and CUDA 11.7 with torch 2.0.1).
+
+For CUDA 11.8 with torch 2.1.2:
 ```bash
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 ```
 
+For CUDA 11.7 with torch 2.0.1:
+```bash
+pip install torch==2.0.1+cu117 torchvision==0.15.2+cu117 --extra-index-url https://download.pytorch.org/whl/cu117
+conda install -c "nvidia/label/cuda-11.7.1" cuda-toolkit
+```
+##### Install TorchSparse
 Install the spaseCNN library, we recommend the version 2.1.0. We can find the installation instruction in the [torchsparse](https://github.com/mit-han-lab/torchsparse) repository.
 ```bash
 conda install -c conda-forge sparsehash
@@ -53,8 +62,14 @@ sudo apt-get install libsparsehash-dev
 git clone --recursive https://github.com/mit-han-lab/torchsparse
 python setup.py install
 ```
-
-#### Installing EVolSplat
+##### Install gsplat
+Install [gsplat](https://github.com/nerfstudio-project/gsplat) from source code. We recommend the version >= 1.0.0.
+```bash
+pip ninja==1.11.1.1
+pip install git+https://github.com/nerfstudio-project/gsplat.git
+```
+If you meet some problems, you can check the dependencies from `environment.yml`.
+#### Install EVolSplat
 Install EVolSplat form source code
 ```bash
 git clone https://github.com/XDimLab/EVolSplat.git
