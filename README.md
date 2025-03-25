@@ -7,8 +7,7 @@ Sheng Miao, [Jiaxin Huang](https://jaceyhuang.github.io/), Dongfeng Bai, Xu Yan,
 Our project page can be seen [here](https://xdimlab.github.io/EVolSplat/).
 <img src="./docs/teaser.png" height="200">
 ## :book: Datasets
-We evaluate our model on [KITTI-360](http://www.cvlibs.net/datasets/kitti-360/) and [Waymo](https://waymo.com/open/download/). Here we show the structure of a test dataset as follow, similar to the [EDUS](https://xdimlab.github.io/EDUS/). 
-We provide the example data for inference on KITTI-360, which can be found in huggingface [here](https://huggingface.co/datasets/cookiemiao/EVolSplat_infer_dataset/tree/main).
+We evaluate our model on [KITTI-360](http://www.cvlibs.net/datasets/kitti-360/) and [Waymo](https://waymo.com/open/download/). Here we show the structure of a test dataset as follow, similar to the [EDUS](https://xdimlab.github.io/EDUS/). We provide the one example data for inference on KITTI-360, which can be found in huggingface [here](https://huggingface.co/datasets/cookiemiao/EVolSplat_infer_dataset/tree/main).
 
 
 The dataset should have a structure as follows:
@@ -46,11 +45,7 @@ Install PyTorch with CUDA (this repo has been tested with CUDA 11.8).
 pip install torch==2.1.2+cu118 torchvision==0.16.2+cu118 --extra-index-url https://download.pytorch.org/whl/cu118
 conda install -c "nvidia/label/cuda-11.8.0" cuda-toolkit
 ```
-After pytorch, install [tiny-cuda-nn](https://github.com/NVlabs/tiny-cuda-nn):
-```bash
-pip install ninja git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch
 
-```
 Install the spaseCNN library, we recommend the version 2.1.0. We can find the installation instruction in the [torchsparse](https://github.com/mit-han-lab/torchsparse) repository.
 ```bash
 conda install -c conda-forge sparsehash
@@ -74,7 +69,7 @@ pip install -e .
 ## :chart_with_upwards_trend: Evaluation & Checkpoint
 We provide the pretrained model trained on `KITTI-360` and `Waymo` and you can download the pre-trained models from  [here](https://xdimlab.github.io/EVolSplat/). 
 
-Place the downloaded checkpoints in `checkpoint` folder in order to test it later.
+Place the downloaded checkpoints in `checkpoints` folder in order to test it later.
 
 ### Feed-forward Inference
 Replace `$PATH_TO_YOUR_DATASET$` with your data path.
