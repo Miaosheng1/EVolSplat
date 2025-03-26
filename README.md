@@ -82,7 +82,7 @@ pip install -e .
 
 
 ## :chart_with_upwards_trend: Evaluation & Checkpoint
-We provide the pretrained model trained on `KITTI-360` and `Waymo` and you can download the pre-trained models from  [here](https://xdimlab.github.io/EVolSplat/). 
+We provide the pretrained model trained on `KITTI-360`, you can download the pre-trained models and example data from  [huggingface](https://huggingface.co/datasets/cookiemiao/Evolsplat_data/tree/main) for a quick start. 
 
 Place the downloaded checkpoints in `checkpoints` folder in order to test it later.
 
@@ -110,5 +110,5 @@ If our work is useful for your research, please give me a star and consider citi
 }
 ```
 ## :sparkles: Acknowledgement
-- This project is based on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio)
-- Some codes are brought from [IBRNet](https://github.com/googleinterns/IBRNet).
+- This project is based on [nerfstudio](https://github.com/nerfstudio-project/nerfstudio) and [gsplat](https://github.com/nerfstudio-project/gsplat).
+- Some codes are brought from [IBRNet](https://github.com/googleinterns/IBRNet) and [SparseNeus](https://github.com/xxlong0/SparseNeuS).
