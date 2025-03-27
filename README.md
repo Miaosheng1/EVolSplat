@@ -1,6 +1,6 @@
 <h1 align="center">EVolSplat: Efficient Volumetric Splatting for Real-Time Urban View Synthesis (CVPR 2025)</h1>
 
-[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2407.12395)
+[![paper](https://img.shields.io/badge/arXiv-Paper-<COLOR>.svg)](https://arxiv.org/pdf/2503.20168)
 
 Sheng Miao, [Jiaxin Huang](https://jaceyhuang.github.io/), Dongfeng Bai, Xu Yan, [Hongyu Zhou](https://hyzhou404.github.io/), [Yue Wang](https://ywang-zju.github.io/), Bingbing Liu, [Andreas Geiger](https://www.cvlibs.net/) and [Yiyi Liao](https://yiyiliao.github.io/) 
 
