@@ -101,7 +101,7 @@ python nerfstudio/scripts/infer_zeroshot.py evolsplat \
 - [ ] Release training code & dataset preparation
 
 ## 📢 News
-2024-02-27: Accepted by CVPR 2025
+2025-02-27: Accepted by CVPR 2025
 
 2025-03-26: Project Page and arxiv
 
