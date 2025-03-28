@@ -96,7 +96,13 @@ python nerfstudio/scripts/infer_zeroshot.py evolsplat \
   --data $PATH_TO_YOUR_DATASET$ \
   --kitti=True 
 ```
+## ✅ TODO
+- [x] Release inference code and checkpoint 
+- [ ] Release training code & dataset preparation
 
+## 📢 News
+2024-02-27: Accepted by CVPR 2025
+2025-03-26: Project Page and arxiv
 
 ## :clipboard: Citation
 
