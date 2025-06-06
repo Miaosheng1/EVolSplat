@@ -98,7 +98,8 @@ python nerfstudio/scripts/infer_zeroshot.py evolsplat \
 ```
 
 ##  Training
-After preparing the training dataset, we provide the training script to train multiple scenes from scratch
+Generate the training sequences by runing `preprocess/run.py`. 
+After preparing the training dataset, we provide the training script to train multiple scenes from scratch. The default sparsity is `Drop50`.
 ```
 ns-train evolsplat --data `$PATH_TO_YOUR_DATASET$`
 ```
