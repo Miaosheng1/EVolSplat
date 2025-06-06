@@ -98,7 +98,8 @@ python nerfstudio/scripts/infer_zeroshot.py evolsplat \
 ```
 ## ✅ TODO
 - [x] Release inference code and checkpoint 
-- [ ] Release training code & dataset preparation
+- [x] Release dataset preprocess code
+- [ ] Release training code & 
 
 ## 📢 News
 2025-02-27: Accepted by CVPR 2025
