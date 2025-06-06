@@ -1,0 +1,37 @@
+# Core deep learning frameworks
+torch-geometric==2.4.0
+torch-scatter==2.1.2
+torchmetrics==1.2.0
+
+# Core scientific computing libraries
+numpy==1.21.5
+scipy==1.9.1
+pandas==1.5.3
+matplotlib==3.6.1
+opencv-python==4.6.0.66
+Pillow
+
+# 3D vision and point cloud processing
+open3d
+
+# Autonomous driving dataset tools
+waymo-open-dataset-tf-2-11-0==1.6.0
+
+# Computer vision enhancements
+kornia==0.7.0
+einops==0.7.0
+lpips==0.1.4
+timm==1.0.11
+
+# Configuration and tools
+omegaconf==2.3.0
+fire==0.5.0
+rich==12.5.1
+tyro==0.5.10
+tqdm==4.66.1
+PyYAML==6.0.1
+
+# Data processing
+h5py==3.9.0
+imageio==2.21.1
+
