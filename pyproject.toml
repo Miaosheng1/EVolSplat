@@ -72,7 +72,6 @@ dependencies = [
     "easydict",
     "einops",
     "moviepy==1.0.3",
-"
 ]
 
 [project.urls]

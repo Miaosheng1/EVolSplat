@@ -86,7 +86,7 @@ We provide the pretrained model trained on `KITTI-360`, you can download the pre
 
 Place the downloaded checkpoints in `checkpoints` folder in order to test it later.
 
-### Feed-forward Inference
+### ✈️ Feed-forward Inference
 Replace `$PATH_TO_YOUR_DATASET$` with your data path.
 ```
 python nerfstudio/scripts/infer_zeroshot.py evolsplat \
@@ -96,15 +96,18 @@ python nerfstudio/scripts/infer_zeroshot.py evolsplat \
   --data $PATH_TO_YOUR_DATASET$ \
   --kitti=True 
 ```
-## ✅ TODO
-- [x] Release inference code and checkpoint 
-- [x] Release dataset preprocess code
-- [ ] Release training code & 
 
+##  Training
+After preparing the training dataset, we provide the training script to train multiple scenes from scratch
+```
+ns-train evolsplat --data `$PATH_TO_YOUR_DATASET$`
+```
 ## 📢 News
-2025-02-27: Accepted by CVPR 2025
+* 2025-02-27: Accepted by CVPR 2025 !
 
-2025-03-26: Project Page and arxiv
+* 2025-03-26: Project Page and arxiv.
+
+* 2025-06-06: Release dataset preprocess & training code !
 
 ## :clipboard: Citation
 
