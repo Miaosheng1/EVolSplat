@@ -1,0 +1,34 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "nvi_seg",
+            "type": "python",
+            "request": "launch",
+            "python": "/home/jxhuang/anaconda3/envs/neus/bin/python",  // 虚拟环境也需要指定
+            "program": "/home/jxhuang/anaconda3/envs/neus/lib/python3.8/site-packages/torch/distributed/launch.py",  // 启动launch.py 可能不存在
+            "console": "integratedTerminal",
+            "cwd": "/home/jxhuang/nvi_sem", 
+            "args": ["--nproc_per_node=1", // 创建进程个数（分配在几个卡上）
+                    "train.py",           // DDP 需要运行的 python 文件
+                    "--dataset", "cityscapes",
+                    "--cv", "0",
+                    "--syncbn","--apex","--fp16",
+                    "--bs_val","1",
+                    "--eval","folder",
+                    "--n_scales", "1.0",
+                    "--dump_assets","--dump_all_images",
+                    "--snapshot","/home/jxhuang/nvi_sem/checkpoints/cityscapes_ocrnet.HRNet_Mscale_outstanding-turtle.pth",
+                    "--arch","ocrnet.HRNet_Mscale",
+                ],
+            // 需要读入的 datsetset path: checkpoints/data/Cityscapes/val
+            "justMyCode": true,
+            "env": {
+                "CUDA_VISIBLE_DEVICES": "0, 2, 4"
+            },
+        }
+    ]
+}

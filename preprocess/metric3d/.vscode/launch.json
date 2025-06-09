@@ -1,0 +1,28 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Test Depth",
+            "type": "debugpy",
+            "request": "launch",
+            "python": "/home/smiao/anaconda3/envs/Gendata/bin/python",
+            "cwd":"/home/smiao/Gen_Dataset",
+            "program": "dataset_methods/metric3d/mono/tools/test_scale_cano.py",
+            "console": "integratedTerminal",
+            "args": [
+                "/home/smiao/Gen_Dataset/dataset_methods/metric3d/mono/configs/HourglassDecoder/vit.raft5.giant2.py",
+                "--load-from=/home/smiao/Gen_Dataset/dataset_methods/metric3d/weight/metric_depth_vit_giant2_800k.pth", 
+                // "--test_data_path=/data1/smiao/Kitti_finetuning/seq_04_nerfacto_0403_60/",
+                "--test_data_path=/data1/smiao/multiscene_waymo/training/scene_14_40/",
+                "--show-dir=/data1/smiao/multiscene_waymo/training/scene_14_40/depth",
+                // "--dataset=kitti360",
+                "--dataset=waymo",
+                "--launcher=None",
+                
+            ],
+        }
+    ]
+}
